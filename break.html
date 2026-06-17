@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='demo'></p>
+    <script>
+        let text = "";
+        loop1: for (let i = 1; i <= 5; i++) {
+            loop2: for (let j = 1; j <= 5; j++) {
+                if (i == 3) {
+                    break loop1; 
+                }
+                 document.getElementById('demo').innerHTML=i,j
+               
+            }
+
+        }
+</script>
+</body>
+
+</html>

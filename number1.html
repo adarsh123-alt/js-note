@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demos"></p>
+    <p id="d"></p>
+
+    <script>
+        let x = (parseInt("10"));
+        console.log(typeof (x))
+        // all posible condition
+        document.getElementById("demo").innerHTML =
+            parseInt("-10") + "<br>" +
+            parseInt("-10.33") + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 years") + "<br>" +
+            parseInt("years 10");
+        // only first value string hoga nahi convert ho payega String to number
+
+
+        document.getElementById("de").innerHTML =
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 6") + "<br>" +
+            parseFloat("10 years") + "<br>" +
+            parseFloat("years 10");
+        // check interger hai ke nahi
+        document.getElementById("dem").innerHTML =
+            Number.isInteger(10) + "<br>" + Number.isInteger(10.5);
+
+        let result = Number.isFinite(123);
+        document.getElementById("demos").innerHTML = result;
+        let results = Number.isNaN(123);
+        document.getElementById("d").innerHTML = results;
+        // only 15 number tk safe hota hai
+        Number.isSafeInteger(10);
+        Number.isSafeInteger(12345678901234567890);
+        // Number and parseFloat use jo number int wo int jo float hai wo float
+        Number.parseFloat("10") + "<br>" +
+            Number.parseFloat("10.33") + "<br>" +
+            Number.parseFloat("10 20 30") + "<br>" +
+            Number.parseFloat("10 years") + "<br>" +
+            Number.parseFloat("years 10");
+    </script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fruit = ["Banana", "Orange", "Apple"];
+        fruit.forEach(function (value) {
+            console.log(value)
+        });
+
+        fruit.push('welcome')
+        console.log(fruit)
+        const fruits = ["Banana", "Orange"];
+        fruits[fruits.length] = "Apple";
+        console.log(fruits)
+        const fruitss = ["Banana", "Orange"];
+
+        fruitss[6] = "Apple";
+
+        console.log(fruitss);
+
+        // Array nested 
+        const myobj={
+            name:"john",
+            age:30,
+            cars:[
+            {name:"frod",models:["welcome to "]},
+            {name:"BMW",models:["welcome to "]},
+            {name:"Fiat",models:["welcome to "]},
+            {name:"frod",models:["welcome to "]}
+            ]
+        }
+
+        console.log(myobj.cars[0].models[0])
+
+
+
+        
+    </script>
+</body>
+
+</html>

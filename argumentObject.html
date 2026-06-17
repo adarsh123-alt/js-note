@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // find maxValue 
+        function findMax(){
+            let max=-Infinity
+            let sum=0;
+            for(let i=0;i<arguments.length;i++){
+                if (arguments[i]>max){
+                  //  max=arguments[i]
+                  sum+=arguments[i];
+                }
+                
+            }
+            return sum;
+        }
+    
+        console.log(findMax(1, 123, 500, 115, 44, 88));
+        // shoet cut find
+        console.log(Math.max(1, 123, 500, 115, 44, 88))
+
+        // reduce are store all value like method to call  and sum value store  
+        // => phir se array isliye bana hai ke reduce only array value ko sum karte hai
+        const sumall=(...nums)=>nums.reduce((a,b)=>a+b,0);
+        console.log(sumall(1,2,3,4,5,5))
+
+        //...args this is call rest parameter aaray mein store kkarta hai
+
+        // object passed by reference
+        let person={
+            name:"Adarsh pandey"
+        }
+        function chageUser(user){
+            user.name="Ankit"
+        }
+        chageUser(person)
+        console.log(person.name)
+
+
+
+        let x=5;
+        let y=6;
+        function multiply (a,b){
+            return a*b;
+        }
+        console.log(multiply(x,y))
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // arroe function hai ismien hm dekhate hai ke arrow function mein aap { } without use kar sakte hai aur varibel bana sakte hai return use kar sakte hai ye apne 
+        const multi = (a, b) => {
+            return a * b
+        }
+        let x = multi(5, 6)
+        console.log(x)
+
+        const add = (a, b) => a + b;
+        let f = add(5, 6)
+        console.log(f)
+
+        name = "t"
+        const obj = {
+            name: "Adarsh",
+            normalFn: function () {
+                console.log("Normal:", this.name);
+            },
+            arrowFn: () => {
+                console.log("Arrow:", this.name);
+            }
+        };
+
+        obj.normalFn(); // "Normal: Adarsh"
+        obj.arrowFn();  // "Arrow: undefined"
+        // arrow function ka diffrense hai ye ye this ke word apne object ka nahi le sakta hai 
+        // outer value only le skata hai you can see this
+        // arrow function ke hosting nahi hota hai isliye 
+
+        const arr = () => "hello";
+        // single value auto return 
+        console.log(arr())
+        // arrow function hoisting nahi hota hai expression hai varibel mein store hota hai
+        // map is method of array ke array ka method hai jo 
+        // map ek aaray bana leta hai usmien store karta hai original value ko chnage nahi karta hai
+        let numbers = [1, 2, 3];
+        let result = numbers.map(x => x * 2);
+
+        console.log(result);
+        console.log(numbers)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+Interview Revision Table
+Code	Output
+typeof 123	"number"
+typeof new Number(123)	"object"
+500 == new Number(500)	true
+500 === new Number(500)	false
+new Number(500) == new Number(500)	false
+new Number(500) === new Number(500)	false
+(32).toString(2)	"100000"
+(32).toString(16)	"20"

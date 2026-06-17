@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let text = "HELLO"
+        console.log(text.length)
+
+        let f = "hello"
+        console.log(text.charAt(0))
+        console.log(text[0])
+        console.log(text.charAt(100))
+        // ye nahi kar sakta  hai  console.log(text.charAt(-1))
+        console.log(text[100]);
+        // only ye hi karata hai -1 at
+        let name = "Adarsh";
+        console.log(name.at(2))
+        console.log(name.at(-1))
+        // only first letter leta hai jao tum Adarsh lkao A lega
+        text = "A";
+        console.log(text.charCodeAt(0));
+        let a = "Hello";
+        let b = "World";
+        let texts = "Apple, Banana, Kiwi";
+        // slice like count the index value and print to according to give index value
+        console.log(texts.slice(2, 13));
+        console.log(texts.slice(-1))
+        console.log(a.concat(" ", b));
+        let g = "Apple, Banana, Kiwi";
+        console.log(g.substring(7, 13));
+        let h = "Apple, Banana, Kiwi";
+        // -5 ke value ko 0 man kena substring
+        console.log(h.substring(-5, 5))
+        let text7 = "Hello world!";
+        let result = text.toWellFormed();
+        document.getElementById('demo').innerHTML=result
+    </script>
+</body>
+
+</html>

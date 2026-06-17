@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Expression mein app function ko varibel and aap usko naam bhi de sakte hai
+        // function to make varibel not have function name
+        // ; last mein hona chiye kq ke ye ek statement hai
+        // this is also anonymous function
+        const add = function (a, b) {
+            return a + b;
+        };
+
+        // call back like function ne  dushere function ko argument ke roop mein work kar raha hai
+        function adds(f) {
+            return f()
+        }
+        function sum() {
+            console.log(5 + 7)
+        }
+        adds(sum);
+        // function Declarations and function Expression 
+        // declaration are hoisting hota hai 
+        let sums = addc(2, 3);
+        function addc(a, b) {
+
+            return a + b;
+        }
+
+        console.log(sum);
+        // function expression mein hoisting nahi hota hai
+        // mein reason ye hai ke hoisting declaration mein hota hai isliye access
+        // kar sakte ho tum phele hi memeory mein store kar leta hai isliye answer mil jata hai
+        /*
+        let sum = add(2, 3);
+
+        const add = function (a, b) {
+
+            return a + b;
+        };
+        */
+        // expression mein app ek varibel mein store karte 
+        // per hoisting hota hai per Temporal deadzone mein hota hai const and var 
+
+            setTimeout(function(){
+                console.log("hello")
+            },2000)
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ye object literal hai
+        const student = {
+            name: "Adarsh pandey",
+            age: 21,
+            city: "prayagraj",
+            greet: function () {
+                return "hello my name is " + this.name;
+            }
+        };
+        console.log(student.name)
+
+        // new object
+        // yaha per tum ek black object create karte ho
+        const student1 = new Object()
+        student1.name = "ADARSH KUMAR PANDEY",
+            student1.age = 20;
+        student1.city = "prayagraj";
+        student1.greets = function () {
+            return "hello world name" + this, name;
+        }
+        console.log(student1.name)
+        console.log(student1.age)
+        console.log(student1.city)
+        console.log(student1.greets())
+
+        // same type ke multiple object  ho t contructor bana chate hai
+        // constructor hai jb jada
+        //constructor function hai 
+        function person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        // mutiple object using new keyword
+        let x = new person("Adarsh", 41);
+        let y = new person("Ankit", 11);
+        console.log(x)
+        console.log(y)
+        // empty object
+        const person3 = {};
+        person3.name = "Ankit"
+        console.log(person3.name)
+        // object ke under function ahai wo methid hai
+        const person4 = {
+            firstName: "John",
+            lastName: "Doe",
+
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        console.log(person4.firstName)
+        console.log(person4.fullName())
+
+        //Object Constructor using new
+        const person = new Object({
+            firstName: "John",
+            age: 50
+        });
+        const person5={
+            firstName:"johan"
+        };
+        console.log("firstName" in person5)
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="demo"></p>
+<body>
+    <script>
+        let text1 = "     Hello World     ";       // String
+        let text2 = text1.toLowerCase();
+        console.log(text1, text2);
+        console.log(text1.toUpperCase());
+        console.log(text1.toLowerCase());
+        // sno side se extra space will br remove
+        console.log(text1.trim());
+        console.log(text1.trimStart());
+        console.log(text1.trimEnd());
+        let text = "5";
+        console.log(text.padStart(7, "0"));
+        console.log(text.padEnd(4, "0"));
+        let text4 = "Hi ";
+        console.log(text4.repeat(3));
+        let z="please enter remove your name"
+        console.log(z.replace('name','Adarsh'))
+
+        let text5="Cats are good. Cats are cute.";
+        console.log(
+           text5= text5.replaceAll("Cats","dogs")
+            )
+            document.getElementById('demo').innerHTML=text5
+
+        let text6="HTML,CSS,JS";
+        console.log(text6.split(","))
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // at ka use kises index value ko get karna spesfic index value se get karna
+        const fruits = ["Banana", "Orange", "Apple"];
+        console.log(fruits.at(1));
+        console.log(fruits.at(-1))
+        // nagative index hota hai
+
+        console.log(fruits.join('*'))
+        let x = (fruits.pop())
+        console.log(x)
+        fruits.push("Ad")
+        console.log(fruits)
+        // frist value to remove
+        const fruitss = ["Banana", "Orange", "Apple"];
+        fruitss.shift();
+        console.log(fruitss);
+        fruitss.unshift("welcome")
+        console.log(fruitss)
+        // check kara ke array hai ke nahi is array
+        console.log(Array.isArray(fruits));
+        //  delete karne ke liye
+        delete fruitss[1]
+        // ye phele target kaha se shruga ten start point kaha se start karne hai per chnage phele value jo 
+        // likhe hoge wo hoga last kb tk karna chata ho 
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+
+        fruit.copyWithin(2, 0);
+
+        console.log(fruit);
+
+        // nested aaray ko single mein convert karta hai
+        // flat
+        const arr = [[1, 2], [3, 4], [5, 6]];
+        //
+        console.log(arr.flat());
+        const arr1 = [1, 2, 3];
+        const result = arr1.flatMap(x => [x, x * 10]);
+        console.log(result);
+
+        // splice add remove replace karta hai
+
+        const f=['banana','Apple'];
+        f.splice(1,0,"kkk")
+        console.log(f)
+    </script>
+</body>
+</html>

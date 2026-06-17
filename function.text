@@ -1,0 +1,15 @@
+Revision Chart
+Concept	Purpose
+Function	Reusable Code
+Parameter	Function Definition Input
+Argument	Function Call Input
+Return	Value Wapas Dena
+Expression	Function Variable Me Store
+Arrow Function	Short Syntax
+Callback	Function as Argument
+this	Current Object
+call()	Custom this
+apply()	Custom this + Array Args
+bind()	New Function Return
+IIFE	Immediate Execution
+Closure	Scope Remember Karna

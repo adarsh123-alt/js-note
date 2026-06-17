@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet(){
+            console.log("hello")
+        }
+        greet()
+
+        function greets(name){
+            console.log("hello "+name);
+        }
+        greets("Adarsh")
+
+        function add(a,b){
+            console.log(a+b)
+        }
+        add(10,20)
+        // return type of function
+        function adds(a,b){// parameter
+            return a+b;
+        }
+        let num=adds(10,20);// argument
+        console.log(num)
+
+        // function Expression  function ko variable bhejo
+        const gree=function(){
+            console.log("hello");
+        }
+        gree();
+
+
+
+        const adda=(a,b)=>{
+            return a+b;
+        };
+        let d=adda(5,6)
+        console.log(d)
+        const addw=(a,b)=> a+b;
+        console.log(addw(1,20));
+        // call back function
+
+        function greet(name){
+            console.log("hello "+name)
+        }
+        function processUser(callback){
+            callback("Adarsh")
+        }
+        processUser(greet);
+        // this key world  ye object to refffrense karta hai object 
+        // this object ko point karta hai
+        const person={
+            name:"Adarsh padey",
+            greet:function(){
+                console.log("hello"+this.name);
+            }
+        }
+        const person1={
+            name:"Ankit pandey",
+            greet:function(){
+                console.log("welcome "+this.name)
+            }
+        };
+        person.greet()
+        person1.greet()
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let x = 9999999999999999;
+        console.log(x);
+        let v = 12345678901234567890n;
+        console.log(v)
+        let y = BigInt("1346449849848489489");
+        console.log(y)
+        // BigInt Decimal Support nahi karta 
+        //Number Aur BigInt Mix Nahi Kar Sakte
+        let h = 100n;
+        console.log(Number(h));
+        let xb = 100;
+        console.log(BigInt(xb));
+        console.log(10n === 10);
+        // bitwise oprators 
+        let a = 5n;
+        let b = 3n;
+
+        console.log(a & b);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--
+    
+String 
+    Number
+    Bigint are big int number like 
+    boolean
+    object
+    undefine
+    null symbol
+
+-->
+
+<p id="demo"></p>
+<script>
+    const person={
+        name:"Adarsh pandey",
+        age:24,
+        gender:"male"
+    }
+    const aray=["Adarsh padney","ankit singh"]
+    document.getElementById('demo').innerHTML=person.name
+    console.log(aray)
+
+    let cuurentDate=new Date();
+    console.log(cuurentDate)
+
+    // symbol ka use unique chije bane mien kiya jata hai
+    let x=Symbol()
+    let y=Symbol()
+    console.log(x==y)
+    console.log(typeof(x))
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // prototype sb object ko provide krata hai use kar sakte hai
+        function Bankaccount(name,balance){
+            this.name=name;
+            this.balance=balance;
+        }
+        Bankaccount.prototype.deposit=function(amount){
+            this.balance+=amount;
+            return `${this.name} and amount ,${amount} deposit money ,${this.balance}`
+        }
+        const user1=new Bankaccount("Adarsh",1000)
+        console.log(user1.deposit(200));
+
+        let x=new Array(123312)
+        console.log(x)
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Comparison Table
+Method	Return
+indexOf()	First index
+lastIndexOf()	Last index
+search()	Index
+match()	Array
+matchAll()	Iterator
+includes()	true / false
+startsWith()	true / false
+endsWith()	true / false
+Sabse Important Methods (Interview + Real Projects)
+length
+charAt()
+at()
+slice()
+substring()
+toUpperCase()
+toLowerCase()
+trim()
+replace()
+replaceAll()
+split()
+concat()
+Yaad Rakhne Ki Trick
+indexOf → pehla index
+lastIndexOf → aakhri index
+includes → hai ya nahi
+startsWith → shuru kis se
+endsWith → khatam kis se
+match → matching data array mein

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let amount = 1000000;
+
+        console.log(amount.toLocaleString("en-IN"));
+        console.log(amount.toLocaleString("en-US"));
+        let x = 100;
+        console.log(x.constructor);
+        //Number is function constructor are to show 
+        Number.prototype.square = function () {
+            return this * this;
+        }
+
+        let xs = 5;
+
+        console.log(xs.square());
+
+        function person(first,last,age,eye){
+            this.firstName=first;
+            this.last=last;
+            this.eye=eye
+        }
+        const myFather=new person("Adarsh"," pandey",'14','black');
+        const myMother=new person("Adarsh"," pandey",'14','black');
+        const Son=new person("Adarsh"," pandey",'14','black');
+        const Daugther=new person("Adarsh"," pandey",'14','black');
+        person.prototype.nationality="hindi";
+        document.getElementById('demo').innerHTML=
+        "my father is " + myFather.nationality+"<br>";
+        //scienticfic  number mein chnage karna
+        let num = 5.56789;
+        console.log(num.toExponential());
+    </script>
+</body>
+
+</html>

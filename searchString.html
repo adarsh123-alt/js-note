@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let text = "Please locate where 'locate' occurs!";
+        console.log(text.indexOf("locate"));
+        //-1 ka mtlab aap ke pass word mein wo meaning nahi tha
+
+        let text1 = "Please locate where 'locate' occurs!";
+        console.log(text1.indexOf("locate", 10));
+        let text2 = "Please  where 'locate' occurs locate!";
+        console.log(text2.lastIndexOf("locate"));
+        // last mein locate aaya hoga uska phele index value kya hoga
+        // search RegEx support karta hai search 
+        let text3 = "My cat is cute, category is different.";
+        console.log(text.search(/Locate/i))
+
+        let text4 = "Contact us at support@example.com for help!";
+        let position = text4.search(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}/);
+        console.log(position);  // 13
+        let text5 = "the rain in SPAIN stays mainly in the plain"
+        console.log(text5.match('ain'));
+        // global kara hai
+        console.log(text5.match(/ain/g))
+        console.log(text5.match(/ain/gi))
+
+        let text6 = "Cats are Cats";
+
+        const result = text6.matchAll(/Cats/g);
+
+        for (const x of result) {
+            console.log(x);
+        }
+
+        // includes are check word hai ke nahi sentense mein
+        let text7="hello world kya ho raha hai"
+        console.log(text7.includes("world"))
+        let email="adarsh@gamil.com";
+        if (email.includes('@')){
+            console.log("valid emial")
+        }
+        // startsWith()
+        let text8="Hello world, welcome to the universe";
+        console.log(text.startsWith('hello'))
+        let text9 = "John Doe";
+        console.log(text9.endsWith("Doe"));
+    </script>
+</body>
+
+</html>

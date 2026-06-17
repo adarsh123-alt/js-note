@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=11;
+        let y=3;
+        let z=(x<10 || y>1)// this or  and any true give an result true
+            console.log(z)
+
+        let a=5;
+        let c=3;
+        let b=(a<10 && c<2)
+        console.log(b)
+
+        let h=(5==8);
+        let f=!(5==8)
+        console.log(f,h)
+// nullish coalescing operator hai jo agar left ke side value null ya undefine hoga usko right side value return kar dega
+        let name=null
+        let text="missing"
+        let result=name?? text;
+        console.log(result)
+
+        let age=5
+        let hr=(age<10)?"hello":"welcome" 
+        console.log(hr)
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="messsagePrint()"> click me</button>
+    <script>
+        // function ko call ya onclick kare per ya self invoked hone means call hona its call invoked
+        function messsagePrint() {
+            return "hello i am here ";
+        }
+        let x = messsagePrint()
+        console.log(x);
+
+        (function () {
+            console.log("hello this best example of self call")
+        })()
+        //sayHello	Function itself reference ko send karta hai
+        //sayHello()	Function result
+        function hello() {
+            return "Hello";
+        }
+
+        function show() {
+            console.log(hello());
+        }
+
+        show();
+        // es6 ka default parameter
+        // jb app koi parameter skip ya na de tb aap ko default parameter ka use karna hoga
+        // ye es6 mein use hota hai
+        function add(a,b=10){
+            return a+b;
+        }
+        let j=add(5)
+        console.log(j)
+        // agar default argumnet nahi denge tb NaN return karega
+    </script>
+</body>
+
+</html>

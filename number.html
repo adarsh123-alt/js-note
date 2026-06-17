@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        // 15 accurate number ho sakta uske baad khrab ho jayega
+        let x = 999999999999999;
+        console.log(x)
+        let y = (0.2 * 10 + 0.1 * 10) / 10;
+        console.log(y);
+        let c = 10;
+        let d = 20;
+        //left se right hota hai phele result and c concat hoge then d hoga
+        let z = "The result is: " + c + d;
+
+        console.log(z);
+
+
+
+        let C = 10;
+        let B = 20;
+        let A = "30";
+        // agar let side string hoga then right koi number hoga concat hokar usko bhi string mein chnage kar dega
+        console.log(A + B + C);
+
+
+        let o = "100"
+        let p = "10"
+        console.log(o * p)
+        console.log(o - p)
+        console.log(o / p)
+        console.log(o + p)
+        // + ke sath concate karta hai
+        let k = 100 / "Apple";
+        let m = NaN;
+        let n = 5;
+        // nan ke sath aap khuch bhi kare like +-*/ ye sb kare nan dega
+        console.log(m + n);
+        console.log(k);
+        console.log(isNaN(k));
+        //nan hoga kq ke ye number nahi hai
+        console.log(typeof NaN);
+
+        let mynumber = 5
+        console.log(mynumber.toString(2));
+        let number = 8;
+        console.log(number.toString(8));
+        let j = 40
+        console.log(j.toString(10));
+        let num = 15
+        console.log(num.toString(16));
+
+        //Scientific notation mein convert karta hai.
+
+        let xz = 9.656;
+
+        console.log(xz.toExponential(2));
+        // do number only in 9 ke baad point ke baad 2 number hoga
+        let xc = 9.656;
+
+        console.log(xc.toFixed(2));
+
+        // Total digits control karta hai.
+        //all number 2 digit mein
+        let xa = 9.656;
+        console.log(xa.toPrecision(2));
+        // primitiveNumber and object 
+        // valueOf se app objet number ko prmitivenumber mein convert kar sakte hai
+        // ye number mein convert karata hai
+        let xq = 123;
+        console.log(xq.valueOf());  // 123
+        document.getElementById("demo").innerHTML =
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number("10") + "<br>" +
+            Number("  10") + "<br>" +
+            Number("10  ") + "<br>" +
+            Number(" 10  ") + "<br>" +
+            Number("10.33") + "<br>" +
+            Number("10,33") + "<br>" +
+            Number("10 33") + "<br>" +
+            Number("John");
+
+    </script>
+</body>
+
+</html>

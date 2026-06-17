@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            name: "John",
+            age: 30
+        };
+
+        console.log(person);
+        let text = person;
+
+        document.write(text);
+        // object isliye de rahi hai ke object to direct string mein convert nahi kar sakte hai
+        const person3 = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        const myArray = Object.values(person3);
+        let s=myArray.toString();
+        console.log(s); 
+
+    </script>
+</body>
+
+</html>

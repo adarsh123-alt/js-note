@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // call hai wo this keyword ke value ko baad mein set bhi kar sakte ho jb function run hota hai
+        const person = {
+            fullName: function () {
+                return this.firstName;
+            }
+        };
+
+        const user = {
+            firstName: "Adarsh"
+        };
+        //apply array ke form mein argument
+        function sum(a, b) {
+            return a + b;
+        }
+
+        console.log(sum.apply(null, [10, 20]));
+
+
+        console.log(person.fullName.call(user));
+
+
+        const person2 = {
+            name: "Adarsh"
+        };
+
+        function greet() {
+            console.log(this.name);
+        }
+
+        const newFunc = greet.bind(person2);
+
+        newFunc();
+       // IIFE (Immediately Invoked Function Expression)
+        (function(){
+            console.log("welcome")
+        })()
+        // closures apne outer scope ka variable ko yaad karna
+        function outer(){
+            let count=0
+            return function(){
+                count++
+                console.log(count)
+            }
+        }
+        const counter=outer()
+        counter()
+        counter()
+        // function reference variable me store kar sakte hai
+        function greet(){
+            console.log("hello")
+        }
+        let x=greet;
+        x()
+        // execute now () iska mtlb hota hai
+
+
+        function multiple(a,b){
+            return a+b
+        }
+        let y=multiple(5,6)
+        console.log(y)
+        // return value acceess kar sakta hai
+
+
+        function login(username,passsword){
+            if(username=="admin"&& passsword=="123"){
+                return "login sucessfully";
+            }
+        }
+        let b=login("admin","123");
+        console.log(b)
+    </script>
+</body>
+
+</html>
