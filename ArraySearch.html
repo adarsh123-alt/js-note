@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // indexOf find index
+        const fruits = ['Apple', 'Orange', 'Mango'];
+        let x = fruits.indexOf('Orange');
+        // indexOf first value agar milega aaray mein uska index batyega
+        let j = fruits.indexOf('Orange');
+        // last indexof se aap ko pata chalega ke last mein wo value ka index aap ko batayega
+        console.log(x);
+
+        const fruitss = ["Banana", "Orange", "Apple"];
+
+console.log(fruitss.includes("Apple"));
+//check karta hai ke wo value aaray mein hai ke nahi includes
+// find karta hai find first value true hoga result show kar dega usko 18 se big chiye first value milega and dedega
+const number=[4,5,8,7,8]
+let first = number.find(function(value){
+    return value
+});
+console.log(first)
+const numbers=[4,5,8,7,8]
+let secand=number.findIndex((values)=>{
+    return values>7;
+})
+console.log(secand)
+
+const temp = [27, 28, 30, 40, 42, 35, 30];
+
+let pos = temp.findLastIndex(x => x > 40);
+console.log(pos);
+    </script>
+</body>
+
+</html>

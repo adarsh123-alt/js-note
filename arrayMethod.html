@@ -49,9 +49,34 @@
 
         // splice add remove replace karta hai
 
-        const f=['banana','Apple'];
-        f.splice(1,0,"kkk")
+        const f = ['banana', 'Apple'];
+        f.splice(1, 0, "kkk")
         console.log(f)
+        //
+        const arr0 = ["Cecilie", "Lone"];
+        const arr2 = ["Emil", "Tobias", "Linus"];
+        const arr3 = ["Robin", "Morgan"];
+        const myChildren = arr0.concat(arr2, arr3);
+        console.log(myChildren)
+        // copywithin se array mein hi dusri value ko copy karke overrite kar dete hai
+        const frui = ["Banana", "Orange", "Apple", "Mango"];
+        frui.copyWithin(2, 0);
+
+        console.log(frui);
+
+        // orignal array ko khuch nahi hota hai
+        const months = ["Jan", "Feb", "Mar", "Apr"];
+
+        const resultww = months.toSpliced(1, 1);
+
+        console.log(resultw);
+        console.log(fruits.slice(-2));// nagative mein bhi
+        const fru = ["Banana", "Orange", "Lemon", "Apple"];
+
+        const res = fru.slice(1, 3);
+
+        console.log(res);
     </script>
 </body>
+
 </html>

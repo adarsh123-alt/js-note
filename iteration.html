@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const number = [45, 4, 9, 16, 25]
+        // fist value is give value and secand is index and third is array
+        number.forEach((value, index, array) => {
+            console.log(value, index, array)
+        })
+        // ye forEach loop hai jo every opration per function ko run karta hai
+        const numbers = [1, 2, 3, 4, 5];
+        const c = numbers.forEach((value => value * 2))
+        console.log(number)
+        // map mein app ko milta hai ek array map ek lag se aaray mein store karta hai
+        const number1 = [1, 2, 3, 4, 5];
+        const d = number1.map(value => value * 2)
+        console.log(d)
+        // flat Map are to use map to store in make new array and flat are nested array to combind
+        const arr = [1, 2, 3];
+
+        const result = arr.flatMap(x => [x, x * 10]);
+
+        // filter value store only true value like 45 and 25 
+        // this is filter value
+        const numberss = [45, 4, 9, 16, 25];
+        const results = numberss.filter((value => value > 18))
+        console.log(results);
+
+        const num = [1, 2, 3, 4];
+        const sum = num.reduce(function (total, value) {
+            return total + value
+        });
+        console.log(sum)
+        const numb = [1, 2, 3];
+        // all condition are true hoga tb true dega all condition are done hoga tb
+        const n = [45, 55, 30];
+        const store = n.every(function (value) {
+            return value > 20;
+        })
+        console.log(store)
+        const o = [4, 9, 25];
+        // ek bhi true hoga to true answer dega
+        const g = o.some(function (value) {
+            return value > 20;
+        });
+        console.log(g);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // original array ko chnage karna
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort()
+        console.log(fruits)
+        // reverse 
+        fruits.reverse()
+        console.log(fruits)
+
+        const points = [40, 100, 1, 5, 25, 10];
+        points.sort(function (a, b) {
+            return a - b;
+            // descending ke liye b-a
+        });
+        console.log(points);
+        const arr=[1,2,3,4,5,6,7]
+        console.log(Math.min.apply(null,arr))
+        console.log(Math.max.apply(null,arr))
+
+
+        const cars=[
+        {type:"ford",year:2016},
+        {type:"saab",year:2001},
+        {type:"BMW",year:2010}
+        ];
+        cars.sort((a,b)=>{
+            return a.year-b.year
+        })
+        console.log(cars)
+
+
+
+        
+        
+    </script>
+</body>
+
+</html>
