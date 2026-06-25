@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            padding: 8px;
+            width: 260px;
+            margin-bottom: 4px;
+        }
+
+        .error {
+            color: red;
+            margin: 0;
+        }
+
+        .ok {
+            color: green;
+            margin: 0;
+        }
+
+        .field {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form id="signupForm">
+    <label>Name:</label><br>
+    <input type="text" id="name" placeholder="Enter your Name">
+    <p id="nameError"></p>
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="Enter your Email">
+    <p id="emailError"></p>
+    <label>Password:</label><br>
+    <input type="password" id="password" placeholder="Enter your Password">
+    <p id="passwordError"></p>
+    <label>Confirm Password:</label><br>
+    <input type="password" id="confirm" placeholder="Confirm Password">
+    <p id="confirmError"></p>
+    <p><button type="submit">Add me</button></p>
+    <p id="valied"> </p>
+    </form>
+    <script>
+        const form = document.getElementById("signupForm");
+        const nameInput= document.getElementById('name');
+        const emailInput= document.getElementById('email');
+        const passwordInput= document.getElementById('password');
+        const confirmInput= document.getElementById('confirm');
+        const nameError= document.getElementById('nameError');
+        const emailError= document.getElementById('emailError');
+        const passwordError= document.getElementById('passwordError');
+        const confirmError = document.getElementById('confirmError');
+        const result= document.getElementById('valied');
+
+        function validName(){
+            let value = nameInput.value.trim()
+            if (value.length <2){
+                showError(nameError,"error aa gaya aao ke name mein please aap two word se jada likhane ke khripaa kare ")
+                return false
+            }
+            clearError(nameError)
+            return true
+        }
+        function validEmail(){
+            let value = emailInput.value.trim();
+                if (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))) {
+                    showError(emailError,"emial not valid please enter valid email")
+                    return false
+                }
+                clearError(emailError)
+                return true
+        }
+        function validPassword(){
+            let value = passwordInput.value.trim();
+            if (value.length < 8){
+                showError(passwordError,"password must be 8 number")
+                return false
+            }
+            clearError(passwordError)
+            return true
+        }
+        function validConfirm(){
+            let val=passwordInput.value
+            let value = confirmInput.value
+            if(val!==value){
+                showError(confirmError,"not match the value please save password enter")
+                return false
+            }
+            clearError(confirmError);
+            return true
+
+        }
+        function showError(e,message){
+            e.innerHTML=message
+        }
+        function clearError(e){
+            e.innerHTML=""
+        }
+        function validate(){
+            let okName= validName()
+            let okEmail=validEmail()
+            let okPassword=validPassword()
+            let okConfirm=validConfirm()
+            return okName && okEmail && okPassword && okConfirm
+        }
+        
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+
+            result.innerHTML=""
+            if (validate()){
+                result.innerHTML="Form is valid";
+                result.className="ok"
+            }
+            else{
+                result.innerHTML="form is not valid"
+                result.className="error"
+            }
+        })
+
+    </script>
+</body>
+</html>

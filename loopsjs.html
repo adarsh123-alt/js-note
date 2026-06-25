@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i=0;i<10;i++){
+            console.log(i)
+        }
+       console.log( " -----------------------------")
+        let i=0
+        while(i<5){// condition hai ye
+            console.log(i)
+            i++
+        }
+         console.log( " -----------------------------")
+         // conditon check nahi karta hai phele print then condition chnage karta hai
+        let j=0
+        do{
+            console.log(j)
+            j++;
+        }
+        while(j<5)
+
+
+        const person ={
+            name:"Adarsh pandey",
+            age:20,
+            contact:"8081504848"
+        }
+
+        for(let key in person){
+            console.log(person[key])
+        }
+        // array ke liye iterable object ke liye hai ye sb
+
+        const fruits = ["Apple", "Banana", "Mango"];
+        for(let x of fruits){
+            console.log(x)
+        }
+
+        // foreach only array ke liye use karna
+        // arroe function hai ye
+       // arrow function ka use  commersce prduct ko show karna
+        const number=[10,20,30,40];
+        number.forEach((num)=>{
+            console.log(num)
+        })
+
+        // array ke method hai ye sb 
+        // map
+        // filter
+        // reduce
+        //forEach
+        const nums=[1,2,3,4]
+        const store=nums.map(num=>num*2);
+        console.log(store)
+        console.log(nums)
+
+        const x=nums.filter(n =>n % 2 ==  0);
+        console.log(x)
+
+        const c=nums.reduce((sum,num)=>sum+=num,0);
+        console.log(c)
+    </script>
+</body>
+</html>

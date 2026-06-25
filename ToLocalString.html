@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 1234567.89;
+
+let us = num.toLocaleString("en-US");
+let de = num.toLocaleString("de-DE");
+let india = num.toLocaleString("hi-IN");
+console.log(us);
+console.log(de);
+console.log(india);
+
+// currency ko print karna
+let price=10000000;
+let rupess=price.toLocaleString("en-US",{
+    style:"currency",
+    currency:"USD"
+});
+console.log(rupess)
+let prices=1000000000
+let rupe=prices.toLocaleString('hi-IN',{
+    style:"currency",
+    currency:"INR"
+});
+console.log(rupe)
+
+
+let date=new Date();
+let text=date.toLocaleString('en-US',{
+    year:"numeric",
+    month:"long",
+    day:"numeric",
+    weekday:"long"
+});
+console.log(text)
+
+/*
+Difference: toString() vs toLocaleString()
+Method	Purpose
+toString()	Simple string conversion
+toLocaleString()	Local format me conversion
+*/
+    </script>
+</body>
+</html>

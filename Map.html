@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // js mein map ek special object hota hai 
+        //key and value like dictionaryue mein 
+        // value ko set karna
+        const fruits = new Map();
+        fruits.set("apples", 500);
+        fruits.set("banaa", 200);
+        console.log(fruits)
+        // value ko get karna
+        console.log(fruits.get('apples'))
+
+        const cars = new Map([
+            ["apples", 100],
+            ["bananas", 300],
+            ["oranges", 200]
+        ])
+        console.log(cars)
+        console.log(cars.set("apples", 50))
+        console.log(cars.size)
+
+        for (let [key, values] of cars) {
+            console.log(key, values)
+        }
+        //delete karne ke liye
+        console.log(cars.delete("apples"))
+        console.log(cars.clear())
+        console.log(cars.has("apples"))
+
+        const cab = new Map([
+            ["apples", 100],
+            ["bananas", 300],
+            ["oranges", 200]
+        ])
+
+
+        let text = ""
+        cab.forEach((key, values) => {
+            text += key + ' ' + values;
+        })
+        console.log(text)
+        // entries all print value in key and value
+        for (const x of fruits.entries()) {
+            text += x;
+        }
+    </script>
+</body>
+
+</html>

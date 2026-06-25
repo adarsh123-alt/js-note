@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const id1 = Symbol()
+        const id2 = Symbol()
+        const id = Symbol("id");
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+
+        person[id] = 123;
+        // hiden id hai ye for loop mein use nahi ho sakta hai 
+        console.log(person);
+
+        const idd = Symbol();
+        const persons = {
+            name: "john"
+        };
+        person[idd] = 123
+        console.log(JSON.stringify(persons))
+        /*
+        Symbol.iterator	for...of support
+        Symbol.asyncIterator	async loop
+        Symbol.toPrimitive	conversion control
+        Symbol.toStringTag	custom type name
+        */
+    </script>
+</body>
+
+</html>

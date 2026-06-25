@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.error("hello")
+        console.warn("welcome")
+        console.info("user logged")
+        console.clear()
+        console.assert()// consition false hoga tb show karega
+        let age = 12;
+        console.assert(age > 19, "not do")
+        console.count("click")
+        console.table()
+        console.dir()// objet ke deatil ke liye
+        // isses pata chega ke ye loop kitna time liya run hone per
+        console.time("Loop");
+
+        for (let i = 0; i < 10000; i++) {
+
+        }
+
+        console.timeEnd("Loop");
+        // trace check karta hai ke kon sa function kb call hua hai sequense mein bata hai
+        function login() {
+            validateUser();
+        }
+
+        function validateUser() {
+            checkDatabase();
+        }
+
+        function checkDatabase() {
+            console.trace("Checking path");
+        }
+
+        login();
+
+    </script>
+</body>
+
+</html>

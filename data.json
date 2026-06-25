@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Adarsh Pandey",
+      "city": "Prayagraj",
+      "skills": ["JavaScript", "React", "Node.js"]
+    },
+    {
+      "id": 2,
+      "name": "Riya Sharma",
+      "city": "Delhi",
+      "skills": ["Python", "Django", "Data Analysis"]
+    },
+    {
+      "id": 3,
+      "name": "Amit Verma",
+      "city": "Mumbai",
+      "skills": ["Java", "Spring Boot", "Microservices"]
+    }
+  ]
+}

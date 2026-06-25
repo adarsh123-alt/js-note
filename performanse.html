@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    // header mein app script ka use karte hai tb 
+    // ye ho sakta hai ke html run hone se phele script run ho jayega tb error aa sakta hai 
+    // large html file jb big ho 
+    // 
+    <script src="app.js" defer>
+
+    </script>
+</head>
+<body>
+    // body mein script use karna chiye kq ke 
+    // html file sb run hone ke baad js run hoga per koi 
+    // Dom ka opration kiye hai to run ho jayega
+    <script>
+        const arr = [1, 2, 3, 4, 5];
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+        // ye coode sahi nahi hai kq ke kb kb loop run hoga tb tk ye arr ke value count karega
+        // ye dobara calculate hota hai
+        // 1000 per acess hoga isliye sahi nahi hai
+
+        const arrs = [1, 2, 3, 4, 5];
+
+        let len = arrs.length;
+
+        for (let i = 0; i < len; i++) {
+            console.log(arrs[i]);
+        }
+
+        // Reduce DOM Access
+        //DOM access JavaScript ke normal variables se bahut slow hota hai.
+        document.getElementById("demo").innerHTML = "Hello";
+
+        document.getElementById("demo").style.color = "red";
+
+        document.getElementById("demo").style.fontSize = "20px";
+
+        // beter way to work 
+        const demo = document.getElementById("demo");
+
+        demo.innerHTML = "Hello";
+        demo.style.color = "red";
+        demo.style.fontSize = "20px";
+
+
+        // Avoid Unnecessary Variables
+        // ye wrong way hai
+        let fullName = firstName + " " + lastName;
+        document.getElementById("demo").innerHTML = fullName;
+        // right way
+        document.getElementById("demo").innerHTML =
+            firstName + " " + lastName;
+
+
+        //Quick Revision
+        /*
+        Rule	Better Practice
+        Loop	Store length outside
+        DOM Access	Cache DOM element
+        DOM Size	Keep HTML small
+        Variables	Avoid unnecessary ones
+        Script Loading	Use defer
+        Large Scripts	Load after page load
+        with	Avoid
+        DOM Search	Minimize
+        */
+    </script>
+</body>
+
+</html>

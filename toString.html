@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        e JavaScript ka built-in method hai jo:
+
+        Number
+        Array
+        Date
+        Object
+        Function
+        sab par kaam karta hai
+        */
+        let x = 123
+        console.log(typeof (x.toString()))
+        console.log(typeof (x))
+        // base 2 binary mein conver
+        console.log(x.toString(2))
+        // hexadecimal
+        console.log(x.toString(8))
+        // octal
+        console.log(x.toString(16))
+        // 
+
+        // Array ke value ko strig mein convert karta hai
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        let myList = fruits.toString();
+
+        console.log(myList);
+        const d = Date()
+        let text = d.toString()
+        console.log(text)
+        // pure function ko string mein write karke consloe per print kar dega
+        function add(a, b) {
+            return a + b;
+        }
+        let person = {
+            firstname: "John",
+            lastname: "Doe"
+        };
+        console.log(add.toString());
+        console.log(person.toString());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // exchange the value
+        let firtName = "Adarsh ";
+        let lastName = "pandey";
+        [firtName, lastName] = [lastName, firtName];
+        console.log(firtName, lastName);
+
+        // Array ya Object ke values ko alag-alag variables me directly nikalna
+        const person = {
+            name: "Adarsh",
+            age: 20
+        };
+
+        let name = person.name;
+        let age = person.age;
+
+        console.log(name);
+        console.log(age);
+
+
+        const person1 = {
+            names: "Ankit",
+            last: "singh"
+        }
+        let { names, last } = person1;
+        console.log(names)
+        console.log(last)
+        // api ko handle karne ke liye use hota hai
+        const u = {
+            id: 0,
+            studentName: "Aman singh",
+            email: "adarshdon1920@gmail.com"
+        };
+        const { id, studentName, email } = u;
+        console.log(id, studentName, email)
+
+        const fruits = ["Apple", "Banana", "Mango"];
+        let [fruit1, fruit2] = fruits;
+        console.log(fruit1);
+        console.log(fruit2);
+        /*
+        | Feature   | Meaning              |
+| --------- | -------------------- |
+| `{}`      | Object destructuring |
+| `[]`      | Array destructuring  |
+| `:`       | Rename variable      |
+| `=`       | Default value        |
+| `...rest` | Remaining values     |
+
+        */
+    </script>
+</body>
+
+</html>

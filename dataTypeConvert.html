@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let result = ('5' + '2');
+        let result1 = ('5' - '2');
+        //- operator string ke saath kaam nahi karta.
+        //Isliye JavaScript strings ko numbers me convert karta hai.
+        console.log(result, result1)
+        //String concatenate ho gayi.
+        // string ko number mein convert karta hai
+        let x = '5';
+        let num = Number(x);
+        console.log(num)
+        console.log(typeof (num))
+        // value mein string and + hoga usko sb string mein conver kar dega
+        let xf = "5" + 2;
+        console.log(xf);
+        //Double NOT (!!)
+        //Boolean conversion ke liye use hota hai.
+        console.log(!!"hello");
+        console.log(!!0);
+        // NAN aayega ye number nahi ban sakta hai
+        console.log("abc" - 1);
+    </script>
+</body>
+
+</html>

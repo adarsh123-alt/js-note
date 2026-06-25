@@ -51,6 +51,29 @@
             return value > 20;
         });
         console.log(g);
+        // key index value deta hai
+        let text = "hello"
+        console.log(Array.from(text))
+        const fruits = ["Apple", "BANANA"];
+        const keys = fruits.entries()
+        const key = fruits.keys();
+        for (let x of key) {
+            console.log(x)
+        }
+        //example uper hai keys mein
+        // entriesm index and value dono 
+        // array ko chnage nahi karta hai original array ko chnage nahi karta hai
+        const months = ["Jan", "Feb", "Mar"];
+
+        const resultss = months.with(1, "February");
+
+        console.log(resultss);
+        //Spread Operator ...
+        const arr1=[1,2,3];
+        const arr2=[...arr1]
+        console.log(arr2)
+
+
     </script>
 </body>
 

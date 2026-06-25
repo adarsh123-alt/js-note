@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // union are both set has qniqe value this is called union
+
+        const A = new Set(["Virat", "Rohit", "Gill"]);
+        const B = new Set(["Rohit", "Gill", "Messi"]);
+        const c = A.union(B);
+        console.log(c);
+
+
+        // intersection common value return karta hai
+        const d = new Set(['A', 'B', 'C']);
+        const e = new Set(['A', 'B', 'V']);
+        const j = d.intersection(e)
+        console.log(j)
+
+        // first set ka value wo eta hai jo secand set mein nahi hota hai ye difference
+        const a = new Set(["Virat", "Rohit", "Gill"]);
+        const b = new Set(["Rohit", "Gill", "Messi"]);
+        const C = a.difference(b);
+        console.log(C);
+
+        //symmetricDifference 
+        // jo bono mein unique value hai // remove common  value
+        const y = new Set(["Virat", "Rohit", "Gill"]);
+        const w = new Set(["Rohit", "Gill", "Messi"]);
+        const f = y.symmetricDifference(w);
+        console.log(f);
+
+        // frist set ke value check karna ke secand set mein hai ke nahi
+        const Ab = new Set(["Rohit", "Gill"]);
+        const Ba = new Set(["Virat", "Rohit", "Gill"]);
+        console.log(Ab.isSubsetOf(Ba));
+        // issuperset first set mein seand set ki sarri value hai ke nahi
+
+        const ah = new Set(['Ankit', 'Adarsh', 'pandey']);
+        const ha = new Set(['pandey', 'Adarsh']);
+        console.log(ah.isSupersetOf(ha))
+
+        // isDisjointFrom dono set common nahi hai
+        const Ac = new Set(["Virat", "Gill"]);
+        const Bc = new Set(["Messi", "Ronaldo"]);
+
+        console.log(Ac.isDisjointFrom(Bc));
+        /*
+        Situation	Method
+        All students combine	union()
+        Common students	intersection()
+        Only class A students	difference()
+        Unique students both sides	symmetricDifference()
+        Small set inside big set	isSubsetOf()
+        Big set containing small set	isSupersetOf()
+        No common students	isDisjointFrom()
+        */
+        // weackset se only object store karta hai prmitive data type store nahi karta hai like string int 
+        let weakSet = new WeakSet();
+
+        let obj1 = { name: "Adarsh" };
+        let obj2 = { name: "Pandey" };
+
+        weakSet.add(obj1);
+        weakSet.add(obj2);
+
+        console.log(weakSet.has(obj1)); // true
+
+        // Agar obj1 ko null kar diya
+        obj1 = null;
+
+        // Ab obj1 garbage collect ho jayega
+        // WeakSet se bhi automatically remove ho jayega
+
+    </script>
+</body>
+
+</html>

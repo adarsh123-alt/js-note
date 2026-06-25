@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="count">0</p>
+    <button id="inc">+</button>
+    <button id="dec">-</button>
+    <button id="res">restart</button>
+    <button id="save">save</button>
+    <button id="load">load</button>
+    
+    <script>
+        // onclick ke jada aap addEveentListener ka use kar sakte hai
+        document.getElementById('inc').addEventListener("click",increse);
+        document.getElementById('dec').addEventListener("click",decrese);
+        document.getElementById('res').addEventListener("click",reset);
+        document.getElementById('save').addEventListener("click",saved);
+        document.getElementById('load').addEventListener("click",loadcount);
+
+        let count=0;
+
+        function update () {
+            document.getElementById("count").innerHTML=count
+        }
+
+        function increse(){
+            count++;
+            update()
+        }
+        function decrese(){
+            if (count!==0){
+                count--
+            }
+            update()
+        }
+        function reset(){
+            count=0;
+            update()
+        }
+        function saved(){
+            let x= localStorage.setItem("count",count);
+
+        }
+        function loadcount(){
+            let store = localStorage.getItem("count")
+            if (store!==null){
+                count=Number(store)
+            }
+            update()
+        }
+
+
+    </script>
+</body>
+</html>

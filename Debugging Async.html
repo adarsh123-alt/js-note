@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        setTimeout(function(){
+            console.log("hello")
+        },2000)
+        async function loadData(){
+            // fetch 
+            let respose=await fetch("data.json");
+            let data = await respose.json();
+           // console.log(data.users[0].name)
+           console.log(data)
+        }
+        loadData()
+
+/*
+        let p= fetch("data.json");
+        p.then((value=>{
+            return value.json()
+        }))
+        p.then((value2=>{
+            console.log(value2)
+        }))
+            */
+    </script>
+</body>
+</html>

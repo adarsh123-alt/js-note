@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        sessionStorage.setItem("username", "Adarsh");
+        let user = sessionStorage.getItem(username);
+        console.log(user);
+        sessionStorage.removeItem("username")
+        sessionStorage.clear();
+        /*
+        OTP verification → OTP ko sirf ek session ke liye store karna.
+
+Form filling → Agar tum ek tab mein form bhar rahe ho aur accidentally refresh karte ho, to data wapas mil jaata hai.
+
+Temporary filters → Agar tum ek shopping site pe filter lagate ho, wo tab tak rehta hai jab tak tab open hai.
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+String → Number
+Number → String
+Boolean → Number
+Date → String
+*/
+        // number se app string se number mein convert kar deta hai
+        let x = Number("3.14");
+        console.log(x);
+        console.log(typeof x);
+        // empty string mein zero dega
+        console.log(Number(""));
+        console.log(Number(" "));
+        // ismein Nan DEGA KQ ke isko string mein convert nahi kar sakte hai
+        console.log(Number("John"));
+        // ye only int kart ahi number float and int dono karta hai decimal value nahi dega
+        console.log(parseInt('25.99'))
+        // only parseFloat only float value dega
+        console.log(parseFloat('20'))
+        // unary + oprator ka use karne per string se number mein convert ho jayega
+
+        let y = "5";
+        let z = +y;
+        console.log(z)
+        console.log(typeof (z))
+
+        // invalid hai number mein convert nahi ho sakta hai
+        let v = "John";
+
+        let u = +v;
+
+        console.log(u);
+        // output Nan hoga
+
+
+
+        //  Converting Number to String
+    </script>
+</body>
+
+</html>

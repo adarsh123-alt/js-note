@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myMap =new WeakMap();
+        let user={
+            name:"Adarsh pandet"
+        }
+        myMap.set(user,"secret data");
+        console.log(myMap.get(user))
+        user=null;
+        // user ko null karne per secreat data ka referse hai ye user ye bhi delete ho jayega remove kar dega 
+
+    </script>
+</body>
+</html>

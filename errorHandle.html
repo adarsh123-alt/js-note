@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // error propeties 
+        //  name Error type
+        //message  Error ka message
+
+        let x = 10;
+        try {
+            x + f
+        }
+        catch (e) {
+            console.log(e.name)
+            console.log(e.message)
+        }
+        //ReferenceError
+        //errorHandle.html:20 f is not defined
+
+
+        // finally statement always execute
+
+        try {
+            console.log("this is try blog")
+        }
+        catch (e) {
+            console.log("this is catch blog")
+        }
+        finally {
+            console.log("this is finally blog")
+        }
+        // finally ka usecase
+        // loader band karna 
+        // data connection ko stop karna
+        // input ko reset karna
+        // file clean karna
+
+        // throw error are use to custom error make 
+
+        let age = 1;
+        try {
+            if (age < 18) {
+                throw new Error("you are under age")
+            }
+            console.log("access")
+        }
+        catch (e) {
+            console.log(e.message)
+        }
+
+
+        let ages = 10;
+        try {
+            if (ages < 18) {
+                throw new Error( "you are under age");
+            }
+            console.log("access")
+        }
+        catch (e) {
+            console.log(e.message)
+        }
+
+
+        
+
+
+    </script>
+</body>
+
+</html>

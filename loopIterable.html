@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  for of loop use hota hai
+        // String 
+        //Array
+        //Set
+        //Map
+
+        const name = "Adarsh";
+        for (const x of name) {
+            console.log(x)
+        }
+        const fruits = ["Apple", "Banana", "Mango"];
+
+        for (const fruit of fruits) {
+            console.log(fruit);
+        }
+        const letters = new Set(["a", "b", "c"]);
+
+        for (const x of letters) {
+            console.log(x);
+        }
+        // Map mein Key value ke form mein use hota hai 
+        //like dictionary bas ismein key value ke paire mein store hota hai
+        const fruitss = new Map([
+            ["apple", 100],
+            ["banana", 200]
+        ]);
+
+        for (const x of fruitss) {
+            console.log(x);
+        }
+
+    </script>
+</body>
+
+</html>

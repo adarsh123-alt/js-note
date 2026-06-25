@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const letter = new Set(['a', 'b', 'c'])
+        console.log(letter)
+        // set mein dublicate value nahi store karte hai
+        // add karne ke liye
+        const letters = new Set();
+        letters.add("a")
+        letters.add("b")
+        letters.add("r")
+        console.log(letters)
+        // of ka use value ko find karne ke liye use hota hai
+        for (const x of letters) {
+            console.log(x)
+        }
+        // const in meim index deta hai of mein value deta hai
+        const arr = ["a", "b", "c"];
+        for (const i in arr) {
+            console.log(i); // index
+        }
+        // set ka syntax ([]) syntax hai 
+        // set se stirng mein convert
+        const l = new Set(["a", "b", "c"])
+        let text = ""
+        for (const x of l) {
+            text += x
+        }
+        console.log(text)
+        // set are object 
+        const g = ["a", "b", "c", "d"];
+        console.log(typeof (g))
+        // check karta hai ke lett value set hai ke nahi instance of Set 
+        const lett = new Set();
+
+        console.log(lett instanceof Set);
+        /*
+        duplicate remove karne
+        unique data store karne
+        fast searching ke liye
+        */
+        const nums=[1,2,3,4];
+        const unique=[...new Set(nums)];
+        console.log(unique)
+        
+
+
+
+    </script>
+</body>
+
+</html>

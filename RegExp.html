@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ye sb check karta hai ki  koi sa bhi word small and big hoga 
+        // search kar lega
+        // uper and lower case ingnore karta hai
+        let text = "visit W3schools";
+        let result = text.search(/W3sChools/i);
+        console.log(result)
+        // w3School same hoga tb work karega jb tk chota wo ya big probelm hoga
+        let texts = "visite W3Schools";
+        let results = texts.match(/W3Schools/);
+
+        let tex = "visit Microsoft";
+        let res = tex.replace(/Microsoft/, 'M');
+        console.log(res)
+
+        let t = "Hello javaScript";
+        let c = t.search(/javaScript/);
+        console.log(c)
+        // gobal search karega jaha per is hoga is aa jayega
+        let te = "is this all there is";
+        let re =
+            te.match(/is/g);
+        console.log(re);
+        // unicode
+        let regex = /\u{1F600}/u;   // 😀 emoji ka Unicode code point
+        console.log(regex.test("😀")); // true
+        // | se app check kar sakta hai aur ye check karta hai
+        let tt =
+            "red green blue";
+
+        let r =
+            tt.match(/red|green|blue/g);
+            console.log(r);
+
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object Destructuring
+        // normal hai not destructuring
+        const person={
+            firstName:"Adarsh",
+            lastName:"pandey",
+            age:50
+        };
+        let first=person.firstName;
+        console.log(first)
+        // 
+        const person1={
+            firstName:"Adarsh",
+            lastName:"pandey",
+            age:50
+        };
+        // destructuring way 
+        // property  order matter nahi karta hai like firstName ho ya lastnam phele ho
+        // copy karta hai bs
+        let{firstName,lastName}=person
+        console.log(firstName)
+        // varibele change karna 
+        const person2={
+            firstName:"Adarsh",
+            lastName:"welcome"
+        };
+        let {lastName:name}=person
+        console.log(person2.lastName)
+
+        // Array value to store destructuring
+        let fruit=["banana","orange","apple"];
+        let [fruit1,fruit2,fruit3]=fruit
+        console.log(fruit1,fruit2,fruit3);
+
+        // rest oprator ...
+
+        const x=[1,2,3,4,5,6];
+        const [a,b,...f]=x;
+        console.log(a,b,f)
+
+        // map mein use karna
+        const nu= new Map([
+            ["apple",500],
+            ["banana",200]
+        ])
+        for (const [key,value] of nu){
+            console.log(key+" "+value)
+        }
+    </script>
+</body>
+</html>

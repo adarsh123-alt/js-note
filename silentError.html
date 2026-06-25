@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JavaScript Silent Errors
+        // jb developer by mistake errro kar deta hai like  Assignment and comparison
+        // logic error bhi hota hai
+
+        let x = 10 / 0;
+        console.log(x)
+        //Assignment Instead of Comparison
+        let result = "Not Active.";
+        let isActive = false;
+
+        // ❌ Galti
+        if (isActive = true) {
+            result = "Active!";
+        }
+
+        console.log(result);
+        /*
+        | Concept             | Example           | Output      |
+| ------------------- | ----------------- | ----------- |
+| Division by zero    | `1/0`             | `Infinity`  |
+| Invalid number      | `parseInt("abc")` | `NaN`       |
+| Missing property    | `user.name`       | `undefined` |
+| String addition     | `"5"+2`           | `"52"`      |
+| Numeric subtraction | `"5"-2`           | `3`         |
+| Loose equality      | `5=="5"`          | `true`      |
+| Strict equality     | `5==="5"`         | `false`     |
+
+        */
+    </script>
+</body>
+
+</html>

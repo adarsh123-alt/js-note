@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user={
+            name:"Adarsh pandey",
+            age:22,
+            gender:"male"
+        }
+        localStorage.setItem("user",JSON.stringify(user))
+
+        // example
+        localStorage.setItem("username","Adarsh padney");
+        let users=localStorage.getItem("username");
+        console.log(users);
+        localStorage.removeItem("username");
+        localStorage.clear()
+    </script>
+</body>
+</html>

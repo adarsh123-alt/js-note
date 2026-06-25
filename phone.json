@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "model": "iPhone 14 Pro",
+    "price": 120000,
+    "features": ["5G", "OLED Display", "Triple Camera", "Face ID"]
+  },
+  {
+    "id": 2,
+    "brand": "Samsung",
+    "model": "Galaxy S23 Ultra",
+    "price": 110000,
+    "features": ["5G", "AMOLED Display", "Quad Camera", "Stylus Support"]
+  },
+  {
+    "id": 3,
+    "brand": "OnePlus",
+    "model": "OnePlus 11",
+    "price": 65000,
+    "features": ["5G", "Fluid AMOLED", "Fast Charging", "OxygenOS"]
+  },
+  {
+    "id": 4,
+    "brand": "Xiaomi",
+    "model": "Mi 13",
+    "price": 45000,
+    "features": ["5G", "AMOLED Display", "AI Camera", "MIUI 14"]
+  }
+]

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        fetch("data.json")
+            .then(response => {
+                console.log(response);
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            });
+            */
+
+            
+        fetch("data.json")
+            .then(resover => {
+                console.log(resover);
+                return resover.json();
+            })
+            .then((data => {
+                console.log(data)
+            }));
+            // code normal floe mein chalata hai
+            // try catch ka use karo 
+            // relible hai code ke liye
+        async function loadData() {
+            try{
+            let x = await fetch("data.json");
+            console.log("hello")
+            let y = await (x.json())
+            console.log(y)
+            }
+            catch(err){
+                console.log("error",err.message)
+            }
+        }
+        loadData()
+
+
+       //  . then ka use karna padhta hai every line 
+       // thoda complex hota hai
+       //.then promise retirn karna hai
+       // every work ke liye ek instruction likhao
+       
+        fetch("data.json")
+            .then(response => response.json())   // JSON parse karna
+            .then(data => {
+                console.log("Menu Items:");
+                data.forEach(item => {
+                    console.log(item.name + " - ₹" + item.price);
+                });
+            })
+            .catch(error => {
+                console.log("Error loading JSON:", error);
+            });
+
+            
+    </script>
+</body>
+
+</html>

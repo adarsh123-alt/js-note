@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="count" style="font-size:40px;">0</p>
+    <p id="message"></p>
+    <button id="btnPlus">+</button>
+    <button id="btnMinus">-</button>
+    <button id="btnReset">Reset</button>
+    <button id="btnSave">Save</button>
+    <button id="btnLoad">Load</button>
+
+
+    <script>
+        // ye tb load hoga tb html file load ho jayega tb load hoga
+        document.addEventListener("DOMContentLoaded",function(){
+
+           const btnPlus= document.getElementById('btnPlus');
+           const btnMinus= document.getElementById('btnMinus');
+           const btnReset= document.getElementById('btnReset');
+           const btnSave= document.getElementById('btnSave');
+           const btnLoad= document.getElementById('btnLoad');
+           const message=document.getElementById('message')
+
+
+
+           btnPlus.addEventListener("click",increse);
+           btnMinus.addEventListener("click",decrese);
+           btnReset.addEventListener("click",resset);
+           btnSave.addEventListener("click",saved);
+           btnLoad.addEventListener("click",load);
+           let count=0;
+           function update(){
+            document.getElementById('count').innerHTML=count
+           }
+           function increse(){
+            count++;
+            update()
+           }
+
+           function decrese(){
+            count--;
+            update()
+           }
+           function resset(){
+            count=0
+            update()
+           }
+           function messages(text){
+            message.innerHTML=text
+            setTimeout(function(){
+                message.innerHTML=""
+            },3000)
+           }
+           function saved(){
+            let store= localStorage.setItem('count',count)
+            messages('loading')
+           }
+           function load(){
+            let get=localStorage.getItem('count')
+            count=Number(get)
+            messages('loading')
+            update()
+           }
+        })
+    </script>
+</body>
+
+</html>

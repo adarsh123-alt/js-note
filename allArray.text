@@ -1,0 +1,44 @@
+Method	Work
+[ ]	New array banana
+new Array()	Array object create
+at()	Index ki value lena
+concat()	Arrays join karna
+copyWithin()	Array ke andar copy
+entries()	Index + value pair
+every()	Sab true hain?
+fill()	Same value fill karna
+filter()	Matching elements lena
+find()	First matching value
+findIndex()	First matching index
+findLast()	Last matching value
+findLastIndex()	Last matching index
+flat()	Nested array flat karna
+flatMap()	map + flat
+forEach()	Har element par loop
+Array.from()	Array banana
+includes()	Item exist karta hai?
+indexOf()	First index find
+isArray()	Array hai ya nahi
+join()	String banana
+keys()	Indexes lena
+lastIndexOf()	Last index find
+length	Total elements
+map()	New transformed array
+Array.of()	Arguments se array
+pop()	Last remove
+push()	End mein add
+reduce()	Single value banana
+reduceRight()	Right se reduce
+reverse()	Array ulta
+shift()	First remove
+slice()	Part copy
+some()	Koi ek true hai?
+sort()	Array sort
+splice()	Add/remove anywhere
+toReversed()	Safe reverse
+toSorted()	Safe sort
+toSpliced()	Safe splice
+toString()	String convert
+unshift()	Start mein add
+valueOf()	Primitive value
+with()	Safe replace value

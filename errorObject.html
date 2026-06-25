@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        | Property  | Work                   |
+| --------- | ---------------------- |
+| `name`    | Error type             |
+| `message` | Error message          |
+| `cause`   | Error ka reason/cause  |
+| `stack`   | Error trace (advanced) |
+*/
+
+// error.cause batana 
+//origin reason batana
+// mostly advanse project mein use hota hai
+
+
+try{
+    throw new Error("Login Failed",{
+        cause:"Wrong password"
+    });
+}
+catch(e){
+    console.log(e.cause)
+}
+// check karta hai isError hai ke nahi 
+let err = new Error("Wrong");
+
+console.log(Error.isError(err));
+
+
+// error ko track karne ke liye use hota hai
+//Error kaha hua uska trace deta hai.
+
+//Advanced debugging me useful.
+
+
+try {
+
+  let x = y + 1;
+
+} catch(error) {
+
+  console.log(error.stack);
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // generator are to yourself define to iterator
+
+        function* myGenerator() {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+        const gen = myGenerator();
+        for (const f of gen) {
+            console.log(f)
+            // retune force ke sath brack kart aha
+            console.log(gen.return('stopped'))
+        }
+
+
+        function* demo() {
+            try {
+                yield 1;
+                yield 2;
+            }
+            catch (err) {
+                console.log("errror")
+            }
+        }
+        const ge = demo();
+
+        console.log(ge.next());
+        ge.throw("Something Wrong");
+
+        function* infinite() {
+
+            let i = 1;
+
+            while (true) {
+                yield i++;
+            }
+        }
+        // this is using to chating etc
+
+    </script>
+</body>
+
+</html>

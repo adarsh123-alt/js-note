@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        JavaScript Error Types
+        ReferenceError
+        TypeError
+        RangeError
+        URIError
+        SyntaxError
+E       valError (अब deprecated)
+        */
+
+        //ReferenceError error jb varable ka use kare per declear na kare referenceError hai 
+        let x=1;
+        try{
+            x=y+1
+        }
+        catch(err){
+            console.log(err.name)
+        }
+
+        // type Error
+        // type error tb aat hai jb aap koi function ya varibel ka bhavior hai jo us taha work n ahi kar sakta hai
+        let y=5;
+        try{
+            y();
+        }
+        catch(e){
+            console.log(e.name)
+        }
+
+        // Range error vaid rahnge hoga jasie array mein -1 value nagative value nahi hai usko access karoge tb error show karega
+
+        try{
+            new Array(-1);
+        }
+        catch(e){
+            console.log(e.name)
+        }
+        //urls error invaliod characters use karne per error ho jaya
+        
+        
+
+    </script>
+</body>
+
+</html>

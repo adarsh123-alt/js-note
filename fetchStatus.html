@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        fetch("piza.json")
+            .then(resove=>{
+                console.log("status",resove.status,resove.headers,resove.body,resove.type,resove.urls,);
+                return resove.json()
+            })
+            .then(resove=>{
+                console.log(resove)
+            })
+            .catch(error=>{
+                console.log("error",error.message)
+            })
+
+
+            async function loading(){
+                try{
+                let respose = await fetch("phone.json");
+                let get= await(respose.json())
+                console.log(get)
+                }
+                catch(e){
+                    console.log(e.message)
+                }
+            }
+            loading()
+            async function test() {
+            let data = await fetch("wrong.json");
+        }
+            
+        test();
+            */
+fetch ("phone.json")
+.then(resove=>{
+    console.log("status",resove.status)
+    return resove.json()
+})
+.then(resove=>{
+    console.log(resove)
+})
+// .catch ek callback function hai jo error ko handle karta hai
+.catch(errror=>{
+    console.log(errror)
+})
+
+
+
+    </script>
+</body>
+
+</html>
